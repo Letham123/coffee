@@ -1,0 +1,81 @@
+body {
+    background: url("/coffee/public/images/home.png") no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+
+.login-container {
+    background-color: rgba(0, 0, 0, 0.5); /* Làm nền form trong suốt */
+    color: white;
+    padding: 30px;
+    width: 350px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+}
+
+.login-container h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.input-container input {
+    width: calc(100% - 40px); 
+    padding: 10px;
+    padding-left: 40px; 
+    border: 1px solid #4caf50;
+    border-radius: 5px;
+    background: transparent;
+    color: white;
+}
+
+.input-container i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.remember-me {
+    display: flex;
+    justify-content: space-between;
+    color:white;
+    font-size: 14px;
+}
+.remember-me a{
+    color:white;
+}
+.register-link {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.register-link a {
+    color:white;
+    text-decoration: none;
+    font-weight: bold;
+}
+

@@ -1,0 +1,586 @@
+:root {
+    --main-color: #000; 
+    --black: #000; 
+    --bg: #fff; 
+    --border: .1rem solid rgba(0, 0, 0, 0.3); 
+}
+
+* {
+    font-family: "Roboto", serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s linear;
+    color: black; 
+}
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+  }
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    width: .8rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: black; 
+    border-radius: 5rem;
+}
+
+
+section {
+    padding: 2rem 7%;
+}
+
+.heading {
+    text-align: center;
+    color: black;
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+    font-size: 4rem;
+}
+
+.heading span {
+    color: var(--main-color);
+    text-transform: uppercase;
+}
+
+.image-container {
+    position: relative;
+    width: 100vw;
+    height: 80vw;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%; /* Để chữ không bị tràn */
+    max-width: 800px;
+}
+.text-overlay h1 {
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+
+.text-overlay p {
+    color: white;
+    font-size: 1.8rem;
+    margin-top: 10px;
+}
+.text-overlay h3{
+    color: white;
+}
+.btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    background: rgb(234, 230, 230);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.btn:hover {
+    transform: scale(1.1);
+    background: white;
+    color: rgb(245, 238, 238);
+}
+
+.btn:active {
+    background: white !important; 
+}
+.header {
+    background: white; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 7%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header .logo img {
+    height: 5rem;
+}
+
+.header .navbar a {
+    margin: 0 1rem;
+    font-size: 1.8rem;
+    gap: 20px;
+    color: black; 
+}
+
+.header .navbar a:hover{
+    transform: scale(1.1);
+    color: orange;
+    padding-bottom: .5rem;
+}
+
+.fas.fa-shopping-cart, .fas.fa-user-circle {
+    font-size: 30px; /* Tăng kích thước icon */
+    color: black; 
+    margin: 0 10px;
+    position: relative;
+}
+
+/* Tùy chỉnh số lượng trong giỏ */
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background: red;
+    color: white;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 50%;
+}
+
+body {
+    background: white; 
+     padding-top: 100px;
+}
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+
+.search-container input {
+    border: none;
+    outline: none;
+    padding: 5px;
+    width: 150px;
+    font-size: 16px;
+}
+
+#search-btn {
+    margin-left: 5px;
+    cursor: pointer;
+    color: gray;
+}
+
+#cart-btn, #menu-btn {
+    font-size: 20px;
+    cursor: pointer;
+}
+.header .cart-item-container .cart-item .content .price {
+    font-size: 2rem;
+    color: var(--main-color);
+}
+.user-dropdown {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    background: rgb(13, 5, 5);
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 999;
+    border-radius: 8px;
+    width: 200px;
+}
+
+.user-dropdown a {
+    text-decoration: none;
+    display: block;
+    margin: 5px 0;
+    color: black;
+}
+
+.user-dropdown a:hover {
+    color: orange;
+}
+
+.home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-size:cover;
+    background-position: center;
+    background: white;
+}
+
+.home .content {
+    max-width: 60rem;
+    text-align: center;
+}
+
+.home .content h3 {
+    font-size: 2.0rem;
+    text-transform: uppercase;
+    color: black;
+}
+
+.home .content p {
+    font-size: 2.0rem;
+    font-weight: lighter;
+    line-height: 1.8;
+    padding: 1rem 0;
+    color: black;
+}
+
+
+
+.about-section {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    border-radius: 10px;
+    gap: 20px; 
+    flex-wrap: wrap;
+  
+}
+
+.about-section img {
+    width: 50%; /* Để ảnh chiếm 50% chiều rộng */
+    max-width: 600px; /* Giới hạn kích thước ảnh */
+    height: auto; /* Giữ tỉ lệ ảnh */
+    border-radius: 10px;
+}
+ .about-text {
+    width: 50%; /* Văn bản chiếm 50% còn lại */
+    font-size: 2.0rem;
+    max-width: 600px;
+    text-align: justify;
+}
+.about-section .about-text h3{
+    font-size: large;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.about-section .about-text p{
+    font-size: 2.0rem;
+    margin-bottom: 20px;
+    text-transform: none;
+    text-align: center;
+}
+.coffee .box-container,
+.cake .box-container,
+.tea .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.coffee .box-container .box,
+.cake .box-container .box,
+.tea .box-container .box {
+    padding: 5rem;
+    text-align: center;
+    border: var(--border);
+    transition: all 0.3s ease; /* Hiệu ứng mượt */
+}
+
+.coffee .box-container .box img,
+.cake .box-container .box img,
+.tea .box-container .box img {
+    height: 20rem;
+    transition: all 0.3s ease;
+}
+
+.coffee .box-container .box h3,
+.cake .box-container .box h3,
+.tea .box-container .box h3 {
+    color: black;
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+
+.coffee .box-container .box .price,
+.cake .box-container .box .price,
+.tea .box-container .box .price {
+    color: black;
+    font-size: 2.5rem;
+    padding: .5rem 0;
+}
+
+.coffee .box-container .box .price span,
+.cake .box-container .box .price span,
+.tea .box-container .box .price span {
+    color: black;
+    font-size: 1.5rem;
+    text-decoration: line-through;
+}
+
+.coffee .box-container .box:hover,
+.coffee .box-container .box:active,
+.coffee .box-container .box:focus,
+.cake .box-container .box:hover,
+.cake .box-container .box:active,
+.cake .box-container .box:focus,
+.tea .box-container .box:hover,
+.tea .box-container .box:active,
+.tea .box-container .box:focus {
+    background: white;
+    transform: scale(1.05); 
+    outline: none;
+}
+
+.coffee .box-container .box:hover > *,
+.coffee .box-container .box:active > *,
+.coffee .box-container .box:focus > *,
+.cake .box-container .box:hover > *,
+.cake .box-container .box:active > *,
+.cake .box-container .box:focus > *,
+.coffee .box-container .box:active > *,
+.coffee .box-container .box:focus > *,
+.tea .box-container .box:hover > *,
+.tea .box-container .box:active > *,
+.tea .box-container .box:focus > * {
+    color: black;
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1.8rem;
+    color: white !important; 
+    background: var(--main-color);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.btn:hover {
+    background: darken(var(--main-color), 10%);
+    color: white !important;
+}
+
+.btn:active,
+.btn:focus {
+    background: black !important;
+    color: white !important;
+    outline: none;
+}
+
+.feedback-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    padding: 20px;
+}
+.feedback-box {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+.feedback-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.feedback-text h3 {
+    margin: 5px 0;
+    font-size: 18px;
+    color: #333;
+}
+.feedback-text span {
+    font-size: 14px;
+    color: #777;
+}
+.feedback-box:hover {
+    transform: scale(1.1); /* Khi rê chuột vào thì phóng to */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Làm đổ bóng mạnh hơn */
+}
+.feedback-box p {
+    font-size: 1.2rem; /* Chỉnh cỡ chữ to hơn */
+    font-weight: bold; /* Làm đậm chữ */
+    text-align: center; /* Căn giữa nội dung */
+    color: #333; /* Màu chữ dễ đọc hơn */
+    margin-bottom: 10px;
+}
+.contact .row{
+	display:flex;
+	align-items: center;
+	background: white;
+	flex-wrap:wrap;
+	gap:1rem;
+}
+
+.contact .row .map{
+	flex:1 1 50rem; 
+	height: 400px; 
+    border-radius: 10px; 
+    filter: brightness(90%);
+}
+
+.contact .row form{
+	flex:1 1 45rem; 
+	padding: 5rem 2rem;
+	text-align: center;
+}
+
+.contact .row form h3{
+	text-transform:uppercase;
+	font-size: 3.5rem;
+	color: white;
+	
+}
+
+.contact .row form .inputBox{
+	display:flex;
+	align-items: center;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	background:#f0f0f0;
+	border:var(--border);
+}
+
+.contact .row form .inputBox span{
+	color: black;
+	font-size: 2rem;
+	padding-left: 2rem;
+}
+
+.contact .row form .inputBox input{
+	width: 100%;
+	padding: 2rem;
+	font-size: 1.7rem;
+	color: black;
+	text-transform:none;
+	background: none;
+}
+.btn {
+    background: black; 
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: black;
+}
+
+.btn:active, 
+.btn:focus {
+    background: black !important;
+    color: white !important;
+    outline: none;
+}
+.icons-filter-wrapper {
+  display: flex;
+  align-items: center; /* canh giữa theo chiều dọc */
+  gap: 20px; /* khoảng cách giữa search và filter */
+}
+
+.search-container form {
+  display: flex;
+  align-items: center;
+}
+
+.search-container input {
+  padding: 5px 10px;
+  font-size: 1.4rem;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+}
+
+.search-container button {
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-left: none;
+  padding: 6px 12px;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+.filter-panel {
+  border: 1px solid #ccc;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.filter-header {
+  font-weight: bold;
+  user-select: none;
+}
+
+.filter-body {
+  margin-top: 10px;
+  display: none;
+  /* nếu bạn muốn hiện phần lọc khi toggle */
+  /* hoặc bạn có thể dùng JS để thêm class active cho hiện */
+}
+
+.filter-body.active {
+  display: block;
+}
+
+/* Style form trong filter-body */
+.filter-group label {
+  font-size: 1.4rem;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.filter-group select,
+.filter-group input {
+  font-size: 1.3rem;
+  padding: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.filter-body button {
+  padding: 6px 12px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
