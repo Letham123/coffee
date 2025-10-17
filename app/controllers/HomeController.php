@@ -16,19 +16,19 @@ class HomeController {
 
     // Lấy dữ liệu theo danh mục
     if ($search !== '') {
-        $coffee = $this->productModel->searchProductsByCategory('coffee', $search);
-        $tea    = $this->productModel->searchProductsByCategory('tea', $search);
-        $cake   = $this->productModel->searchProductsByCategory('cake', $search);
+        $nhan = $this->productModel->searchProductsByCategory('nhẫn', $search);
+        $daychuyen    = $this->productModel->searchProductsByCategory('Dâychuyền', $search);
+        $vongtay   = $this->productModel->searchProductsByCategory('Vòngtay', $search);
     } else {
-        $coffee = $this->productModel->getProductsByCategory('coffee');
-        $tea    = $this->productModel->getProductsByCategory('tea');
-        $cake   = $this->productModel->getProductsByCategory('cake');
+        $nhan = $this->productModel->getProductsByCategory('nhẫn');
+        $daychuyen = $this->productModel->getProductsByCategory('Dâychuyền');
+        $vongtay= $this->productModel->getProductsByCategory('Vòngtay');
     }
 
     $this->view('home/index', [
-        'coffee' => $coffee,
-        'tea'    => $tea,
-        'cake'   => $cake,
+        'nhan' => $nhan,
+        'daychuyen'    => $daychuyen,
+        'vongtay'   => $vongtay,
         'search' => $search
     ]);
     }
@@ -39,7 +39,7 @@ class HomeController {
 
     if ($search === '') {
         // Nếu không có từ khóa, redirect về trang chính
-        header("Location: /coffee/");
+        header("Location: /jewelery/");
         exit;
     }
 
@@ -56,7 +56,7 @@ class HomeController {
     // Hàm load view
     private function view($view, $data = []) {
         extract($data);
-        // Đường dẫn giờ sẽ đúng: C:\xampp\htdocs\coffee\app\views/home/index.php
+        // Đường dẫn giờ sẽ đúng: C:\xampp\htdocs\jewelery\app\views/home/index.php
         require_once __DIR__ . "/../views/{$view}.php";
     }
 }

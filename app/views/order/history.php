@@ -20,8 +20,8 @@
     <?php foreach($orders as $order): ?>
         <div class="order-item">
             Mã đơn: <?= htmlspecialchars($order['id_order']) ?> |
-            Tổng tiền: <?= number_format($order['tongtien']) ?> VND |
-            Trạng thái: <?= htmlspecialchars($order['trangthai']) ?>
+            Tổng tiền: <?= number_format($order['total']) ?> VND |
+            Trạng thái: <?= htmlspecialchars($order['status']) ?>
         </div>
     <?php endforeach; ?>
 <?php endif; ?>

@@ -12,11 +12,11 @@
 </head>
 <body>
 <h2>Thêm Danh Mục Mới</h2>
-<p><a href="/coffee/admin/category/index">← Quay lại danh sách danh mục</a></p>
+<p><a href="/jewelry/admin/category/index">← Quay lại danh sách danh mục</a></p>
 
-<form method="post" action="/coffee/admin/category/create">
-    <label for="ten_danhmuc">Tên danh mục:</label>
-    <input type="text" id="ten_danhmuc" name="ten_danhmuc" required>
+<form method="post" action="/jewelry/admin/category/create">
+    <label for="name_category">Tên danh mục:</label>
+    <input type="text" id="name_category" name="name_category" required>
 
     <button type="submit">Thêm danh mục</button>
 </form>

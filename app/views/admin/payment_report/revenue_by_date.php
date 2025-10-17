@@ -32,4 +32,4 @@
 <?php endif; ?>
 
 <p>Tổng doanh thu: <b><?= number_format($revenue) ?> đ</b></p>
-<a href="/coffee/admin/paymentreport/index">Quay lại</a>
+<a href="/jewelry/admin/paymentreport/index">Quay lại</a>

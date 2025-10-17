@@ -1,6 +1,6 @@
 <h2 style="text-align: center;">Danh Sách Phản Hồi Khách Hàng</h2>
 <p>
-    <a href="/coffee/admin/admindashboard" style="background-color: black; color: white; padding: 8px 15px; text-decoration: none; border-radius: 5px;">Quay lại</a>
+    <a href="/jewelry/admin/admindashboard" style="background-color: black; color: white; padding: 8px 15px; text-decoration: none; border-radius: 5px;">Quay lại</a>
 </p>
 <table border="1" cellpadding="10" cellspacing="0" style="width: 100%; border-collapse: collapse;">
 
@@ -21,9 +21,9 @@
                     <td><?= $c['id'] ?></td>
                     <td><?= $c['name'] ?></td>
                     <td><?= $c['email'] ?></td>
-                    <td><?= $c['sdt'] ?></td>
-                    <td><?= $c['noidung'] ?></td>
-                    <td><?= $c['ngaygui'] ?></td>
+                    <td><?= $c['phone'] ?></td>
+                    <td><?= $c['descr'] ?></td>
+                    <td><?= $c['create_at'] ?></td>
                 </tr>
             <?php endforeach; ?>
         <?php else: ?>

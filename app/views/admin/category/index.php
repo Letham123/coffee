@@ -17,8 +17,8 @@
     
 <h2>Quản Lý Danh Mục Sản Phẩm</h2>
 
-<p><a href="/coffee/admin/category/create" class="button">Thêm danh mục mới</a></p>
-<p><a href="/coffee/admin/admindashboard" class="button">Quay lại</a></p>
+<p><a href="/jewelry/admin/category/create" class="button">Thêm danh mục mới</a></p>
+<p><a href="/jewelry/admin/admindashboard" class="button">Quay lại</a></p>
 <table>
     <tr>
         <th>ID</th>
@@ -28,10 +28,10 @@
     <?php foreach($categories as $category): ?>
     <tr>
         <td><?= $category['id_category'] ?></td>
-        <td><?= htmlspecialchars($category['ten_danhmuc']) ?></td>
+        <td><?= htmlspecialchars($category['name_category']) ?></td>
         <td>
-            <a href="/coffee/admin/category/edit/<?= $category['id_category'] ?>" class="button">Sửa</a> |
-            <a href="/coffee/admin/category/delete/<?= $category['id_category'] ?>" onclick="return confirm('Bạn có chắc muốn xóa danh mục này?')" class="button delete">Xóa</a>
+            <a href="/jewelry/admin/category/edit/<?= $category['id_category'] ?>" class="button">Sửa</a> |
+            <a href="/jewelry/admin/category/delete/<?= $category['id_category'] ?>" onclick="return confirm('Bạn có chắc muốn xóa danh mục này?')" class="button delete">Xóa</a>
         </td>
     </tr>
     <?php endforeach; ?>

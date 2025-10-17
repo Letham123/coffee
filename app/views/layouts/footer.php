@@ -1,11 +1,11 @@
-<footer class="coffee-footer">
+<footer class="jewelry-footer">
     <div class="footer-bottom">
-        <p>© 2025 Broken Strength Coffee. All rights reserved.</p>
+        <p>© 2025 Lara Jewelry. All rights reserved.</p>
     </div>
 </footer>
 
 <style>
-    .coffee-footer {
+    .jewelry-footer {
         position: fixed;
         bottom: 0;
         left: 0;
@@ -17,7 +17,7 @@
         text-align: center;
     }
 
-    .coffee-footer .footer-bottom p {
+    .jewelry-footer .footer-bottom p {
         font-size: 16px;
         color: white;
         font-weight: bold;

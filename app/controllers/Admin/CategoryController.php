@@ -23,7 +23,7 @@ class CategoryController {
             if ($ten_danhmuc) {
                 $this->categoryModel->create($ten_danhmuc);
             }
-            header("Location: /coffee/admin/category/index");
+            header("Location: /jewelry/admin/category/index");
             exit();
         }
         require_once __DIR__ . '/../../views/admin/category/create.php';
@@ -37,7 +37,7 @@ class CategoryController {
             if ($ten_danhmuc) {
                 $this->categoryModel->update($id_category, $ten_danhmuc);
             }
-            header("Location: /coffee/admin/category/index");
+            header("Location: /jewelry/admin/category/index");
             exit();
         }
         require_once __DIR__ . '/../../views/admin/category/edit.php';
@@ -46,7 +46,7 @@ class CategoryController {
     // Xóa danh mục
     public function delete($id_category) {
         $this->categoryModel->delete($id_category);
-        header("Location: /coffee/admin/category/index");
+        header("Location: /jewelry/admin/category/index");
         exit();
     }
 }

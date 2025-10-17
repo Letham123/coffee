@@ -27,10 +27,10 @@ class UserController extends Controller {
                 // Kiểm tra vai trò và điều hướng
                 if ($user['loai_nguoi_dung'] === 'Admin') {
                     $_SESSION['is_admin'] = true;
-                    header("Location: /coffee/admin/admindashboard");
+                    header("Location: /jewelry/admin/admindashboard");
                 } else {
                      $_SESSION['is_admin'] = false;
-                    header("Location: /coffee/"); 
+                    header("Location: /jewelry/"); 
                 }
                 exit();
             } else {
@@ -78,7 +78,7 @@ class UserController extends Controller {
     public function logout() {
     session_start();
     session_destroy();
-    header("Location: /coffee/home/index");
+    header("Location: /jewelry/home/index");
     exit();
 }
 }

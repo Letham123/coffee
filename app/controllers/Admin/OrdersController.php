@@ -13,7 +13,7 @@ class OrdersController {
         session_start();
         }
         if (!isset($_SESSION['is_admin']) || $_SESSION['is_admin'] !== true) {
-            header("Location: /coffee/login"); 
+            header("Location: /jewelry/login"); 
             exit();
         }
 
@@ -48,7 +48,7 @@ class OrdersController {
     public function updateStatus($id_order) {
     session_start();
     if (!isset($_SESSION['is_admin']) || $_SESSION['is_admin'] !== true) {
-        header("Location: /coffee/login");
+        header("Location: /jewelry/login");
         exit();
     }
 
@@ -59,7 +59,7 @@ class OrdersController {
         }
     }
 
-    header("Location: /coffee/admin/orders/view/$id_order");
+    header("Location: /jewelry/admin/orders/view/$id_order");
     exit();
 }
 
@@ -67,7 +67,7 @@ class OrdersController {
 
     public function delete($id_order) {
         $this->orderModel->delete($id_order);
-        header("Location: /coffee/admin/orders/index");
+        header("Location: /jewelry/admin/orders/index");
         exit();
     }
 }

@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Đăng nhập</title>
-    <link rel="stylesheet" href="/coffee/public/css/styles.css"> 
+    <link rel="stylesheet" href="/jewelry/public/css/styles.css"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
         .message { padding: 10px; margin-bottom: 10px; border-radius: 5px; }
         .error { background-color: #f8d7da; color: #721c24; }
         body {
-    background: url("/coffee/public/images/home.png") no-repeat center center fixed;
+    background: url("/jewelry/public/images/home.png") no-repeat center center fixed;
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -38,7 +38,7 @@
             </div>
 
             <div class="register-link">
-                <a href="/coffee/user/register">Chưa có tài khoản?</a>
+                <a href="/jewelry/user/register">Chưa có tài khoản?</a>
             </div>
      
 

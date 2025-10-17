@@ -19,8 +19,8 @@
 </head>
 <body>
 <h2>Quản Lý Mã Giảm Giá</h2>
-<p><a href="/coffee/admin/voucher/create" class="button">Thêm mã giảm giá mới</a></p>
- <a href="/coffee/admin/admindashboard" class="button">Quay về</a>
+<p><a href="/jewelry/admin/voucher/create" class="button">Thêm mã giảm giá mới</a></p>
+ <a href="/jewelry/admin/admindashboard" class="button">Quay về</a>
 <table>
     <tr>
         <th>ID</th>
@@ -55,8 +55,8 @@
                 <?php endif; ?>
             </td>
             <td>
-                <a href="/coffee/admin/voucher/edit/<?= $item['id'] ?>" class="button">Sửa</a>
-                <a href="/coffee/admin/voucher/delete/<?= $item['id'] ?>" 
+                <a href="/jewelry/admin/voucher/edit/<?= $item['id'] ?>" class="button">Sửa</a>
+                <a href="/jewelry/admin/voucher/delete/<?= $item['id'] ?>" 
                    onclick="return confirm('Bạn có chắc muốn xóa mã giảm giá này?')" 
                    class="button delete">Xóa</a>
             </td>

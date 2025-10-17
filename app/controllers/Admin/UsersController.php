@@ -11,7 +11,7 @@ class UsersController {
         session_start();
         }
         if (!isset($_SESSION['is_admin']) || $_SESSION['is_admin'] !== true) {
-            header("Location: /coffee/login");
+            header("Location: /jewelry/login");
             exit();
         }
         $this->userModel = new UserModel($db);
@@ -40,14 +40,14 @@ class UsersController {
             if ($id_user && $username && $email && $loai_nguoi_dung) {
                 $this->userModel->update($id_user, $username, $email, $loai_nguoi_dung);
             }
-            header("Location: /coffee/admin/users/index");
+            header("Location: /jewelry/admin/users/index");
             exit();
         }
     }
 
     public function delete($id_user) {
         $this->userModel->delete($id_user);
-        header("Location: /coffee/admin/users/index");
+        header("Location: /jewelry/admin/users/index");
         exit();
     }
 }

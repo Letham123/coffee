@@ -7,7 +7,7 @@
 <body>
 <h2>Sửa Sản phẩm #<?= $product['id_product'] ?></h2>
 
-<form method="post" action="/coffee/admin/products/edit/<?= $product['id_product'] ?>">
+<form method="post" action="/jewelry/admin/products/edit/<?= $product['id_product'] ?>">
     <p>
         <label for="name">Tên sản phẩm:</label><br>
         <input type="text" id="name" name="name" value="<?= htmlspecialchars($product['name']) ?>" required>
@@ -40,6 +40,6 @@
     <button type="submit">Cập nhật sản phẩm</button>
 </form>
 
-<p><a href="/coffee/admin/products/index">Quay lại danh sách sản phẩm</a></p>
+<p><a href="/jewelry/admin/products/index">Quay lại danh sách sản phẩm</a></p>
 </body>
 </html>

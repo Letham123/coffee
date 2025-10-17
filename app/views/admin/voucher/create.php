@@ -26,10 +26,10 @@
 <body>
 <h2>Thêm mã giảm giá mới</h2>
 
-<form method="post" action="/coffee/admin/voucher/create">
+<form method="post" action="/jewelry/admin/voucher/create">
     <p>
         <label for="ma">Mã giảm giá:</label><br>
-        <input type="text" id="ma" name="ma" placeholder="VD: COFFEE20" required>
+        <input type="text" id="ma" name="ma" placeholder="VD: jewelry20" required>
     </p>
     <p>
         <label for="phan_tram_giam">Phần trăm giảm (%):</label><br>
@@ -67,7 +67,7 @@
     </p>
     <p>
         <button type="submit">Thêm mới</button>
-        <a href="/coffee/admin/voucher/index" class="cancel-btn">Hủy</a>
+        <a href="/jewelry/admin/voucher/index" class="cancel-btn">Hủy</a>
     </p>
 </form>
 

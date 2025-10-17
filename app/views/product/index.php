@@ -26,7 +26,7 @@
                     <input type="hidden" name="name" value="<?= htmlspecialchars($product['name']) ?>">
                     <input type="hidden" name="price" value="<?= $product['price'] ?>">
                     <input type="hidden" name="image" value="<?= htmlspecialchars($product['image']) ?>">
-                    <input type="text" name="ghichu" placeholder="Ghi chú (nếu có)">
+                    <input type="text" name="note" placeholder="Ghi chú (nếu có)">
                     <button class="add-to-cart" 
                         data-id="<?= $product['id'] ?>" 
                         data-name="<?= $product['name'] ?>" 
@@ -39,6 +39,6 @@
             </div>
         <?php endforeach; ?>
     </div>
-<script src="/coffee/public/js/cart.js"></script>
+<script src="/jewelry/public/js/cart.js"></script>
 </body>
 </html>

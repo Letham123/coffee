@@ -35,8 +35,8 @@
 <body>
     <div class="icon-success">&#10004;</div>
     <h2 style="color:green;">Đặt hàng thành công!</h2>
-    <p>Cảm ơn bạn đã mua hàng tại Broken Strength Coffee.</p>
-<button onclick="window.location.href='/coffee/'" 
+    <p>Cảm ơn bạn đã mua hàng tại Lara Jewelry.</p>
+<button onclick="window.location.href='/jewelry/'" 
     style="padding:10px 20px; background:#000; color:#fff; border:none; border-radius:5px; cursor:pointer;">
     Về trang chủ
 </button>

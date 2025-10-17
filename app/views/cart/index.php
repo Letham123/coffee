@@ -3,14 +3,14 @@
 $cart = $_SESSION['cart'] ?? [];
 $discountAmount = $_SESSION['applied_discount'] ?? 0;
 $appliedCode = $_SESSION['applied_code'] ?? '';
-$phivanchuyen = 30000;
+$fee_ship = 30000;
 ?>
 <!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
     <title>Giỏ hàng</title>
-    <link rel="stylesheet" href="/coffee/public/css/style.css">
+    <link rel="stylesheet" href="/jewelry/public/css/style.css">
     <style>
         body { font-family: Arial, sans-serif; }
         h1 { text-align: center; font-size: 32px; margin-bottom: 20px; }
@@ -38,7 +38,7 @@ $phivanchuyen = 30000;
 <?php if (empty($cart)): ?>
     <p style="text-align:center; font-size:18px;">Chưa có sản phẩm nào.</p>
     <div style="text-align:center;">
-        <a href="/coffee" class="button black">Quay về trang chủ</a>
+        <a href="/jewelry" class="button black">Quay về trang chủ</a>
     </div>
 <?php else: ?>
     <?php $tongtien = 0; ?>
@@ -62,16 +62,16 @@ $phivanchuyen = 30000;
                 $tongtien += $thanhtien;
             ?>
             <tr>
-                <td><img src="/coffee/public/images/<?= htmlspecialchars($item['image']) ?>" alt="<?= htmlspecialchars($item['name']) ?>"></td>
+                <td><img src="/jewelry/public/images/<?= htmlspecialchars($item['image']) ?>" alt="<?= htmlspecialchars($item['name']) ?>"></td>
                 <td><?= htmlspecialchars($item['name']) ?></td>
                 <td><?= number_format($price) ?> VND</td>
                 <td>
-                    <form action="/coffee/cart/updateQuantity" method="post" style="display:inline;">
+                    <form action="/jewelry/cart/updateQuantity" method="post" style="display:inline;">
                         <input type="hidden" name="id" value="<?= $item['id'] ?>">
                         <button type="submit" name="action" value="decrease" class="quantity-btn">-</button>
                     </form>
                     <span class="quantity-display"><?= $quantity ?></span>
-                    <form action="/coffee/cart/updateQuantity" method="post" style="display:inline;">
+                    <form action="/jewelry/cart/updateQuantity" method="post" style="display:inline;">
                         <input type="hidden" name="id" value="<?= $item['id'] ?>">
                         <button type="submit" name="action" value="increase" class="quantity-btn">+</button>
                     </form>
@@ -87,13 +87,13 @@ $phivanchuyen = 30000;
 
     <!-- Mã giảm giá -->
     <div class="discount-section">
-        <form action="/coffee/cart/applyDiscount" method="post" style="display:inline-block;">
+        <form action="/jewelry/cart/applyDiscount" method="post" style="display:inline-block;">
             <input type="text" name="discount_code" id="discount_code" placeholder="Nhập mã giảm giá..." value="<?= htmlspecialchars($appliedCode) ?>">
             <button type="submit" class="button black">Áp dụng</button>
         </form>
     </div>
 
-    <?php $tongthanhtoan = $tongtien + $phivanchuyen - $discountAmount; ?>
+    <?php $tongthanhtoan = $tongtien + $fee_ship - $discountAmount; ?>
     <table class="summary-table">
         <tr>
             <td>Tổng tiền:</td>
@@ -101,7 +101,7 @@ $phivanchuyen = 30000;
         </tr>
         <tr>
             <td>Phí vận chuyển:</td>
-            <td><?= number_format($phivanchuyen) ?> VND</td>
+            <td><?= number_format($fee_ship) ?> VND</td>
         </tr>
         <?php if($discountAmount > 0): ?>
         <tr class="discount-line">
@@ -117,7 +117,7 @@ $phivanchuyen = 30000;
 
     <div class="cart-actions">
         <a href="#" id="clear-cart" class="button red">Xóa toàn bộ giỏ hàng</a>
-        <a href="/coffee/order/placeOrder" class="button black">Đặt hàng</a>
+        <a href="/jewelry/order/placeOrder" class="button black">Đặt hàng</a>
     </div>
 <?php endif; ?>
 
@@ -129,7 +129,7 @@ document.addEventListener("DOMContentLoaded", function() {
             e.preventDefault();
             const id = this.dataset.id;
             if(confirm('Bạn có chắc muốn xóa sản phẩm này không?')) {
-                fetch('/coffee/cart/remove', {
+                fetch('/jewelry/cart/remove', {
                     method: 'POST',
                     headers: {'Content-Type':'application/x-www-form-urlencoded'},
                     body: 'id=' + encodeURIComponent(id)
@@ -147,7 +147,7 @@ document.addEventListener("DOMContentLoaded", function() {
         clearCartBtn.addEventListener('click', function(e) {
             e.preventDefault();
             if(confirm('Bạn có chắc muốn xóa toàn bộ giỏ hàng không?')) {
-                fetch('/coffee/cart/remove', {
+                fetch('/jewelry/cart/remove', {
                     method: 'POST',
                     headers: {'Content-Type':'application/x-www-form-urlencoded'},
                     body: 'all=1'

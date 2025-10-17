@@ -44,7 +44,7 @@ class CartController {
             }
 
             $_SESSION['flash_message'] = "Đã thêm vào giỏ hàng!";
-            header("Location: /coffee/cart/index");
+            header("Location: /jewelry/cart/index");
             exit;
         }
     }
@@ -59,7 +59,7 @@ class CartController {
                 if ($action === 'decrease' && $_SESSION['cart'][$id]['quantity'] > 1) $_SESSION['cart'][$id]['quantity']--;
             }
         }
-        header("Location: /coffee/cart/index");
+        header("Location: /jewelry/cart/index");
         exit;
     }
 
@@ -78,7 +78,7 @@ class CartController {
                 }
             }
         }
-        header("Location: /coffee/cart/index");
+        header("Location: /jewelry/cart/index");
         exit;
     }
 
@@ -91,7 +91,7 @@ class CartController {
 
             if ($code === '') {
                 $_SESSION['flash_message'] = "Vui lòng nhập mã giảm giá!";
-                header("Location: /coffee/cart/index");
+                header("Location: /jewelry/cart/index");
                 exit;
             }
 
@@ -138,7 +138,7 @@ class CartController {
 
             }
 
-            header("Location: /coffee/cart/index");
+            header("Location: /jewelry/cart/index");
             exit;
         }
 }

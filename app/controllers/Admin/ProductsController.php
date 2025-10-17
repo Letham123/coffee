@@ -10,7 +10,7 @@ class ProductsController {
         session_start();
         }
         if (!isset($_SESSION['is_admin']) || $_SESSION['is_admin'] !== true) {
-            header("Location: /coffee/login");
+            header("Location: /jewelry/login");
             exit();
         }
         $this->productModel = new ProductModel($db);
@@ -30,7 +30,7 @@ class ProductsController {
             $description = $_POST['description'] ?? '';
 
             $this->productModel->create($name, $price, $image, $id_category, $description);
-            header("Location: /coffee/admin/products/index");
+            header("Location: /jewelry/admin/products/index");
             exit();
         }
         $categoryModel = new \app\models\CategoryModel($this->db); // nếu $db private thì truyền vào constructor
@@ -59,14 +59,14 @@ class ProductsController {
                 $targetFile = $targetDir . $fileName;
 
                 if (move_uploaded_file($_FILES['image']['tmp_name'], $targetFile)) {
-                    $image = "/coffee/public/uploads/" . $fileName;
+                    $image = "/jewelry/public/uploads/" . $fileName;
                 }
             }
 
             // Cập nhật vào DB
             $this->productModel->update($id, $name, $price, $image, $id_category, $description);
 
-            header("Location: /coffee/admin/products/index");
+            header("Location: /jewelry/admin/products/index");
             exit();
         }
          $categoryModel = new \app\models\CategoryModel($this->db);
@@ -75,7 +75,7 @@ class ProductsController {
     }
     public function delete($id) {
         $this->productModel->delete($id);
-        header("Location: /coffee/admin/products/index");
+        header("Location: /jewelry/admin/products/index");
         exit();
     }
 }

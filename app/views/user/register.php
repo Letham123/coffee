@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8" />
     <title>Đăng ký</title>
-    <link rel="stylesheet" href="/coffee/public/css/styles.css" />
+    <link rel="stylesheet" href="/jewelry/public/css/styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
     <style>
         body {
-    background: url("/coffee/public/images/home.png") no-repeat center center fixed;
+    background: url("/jewelry/public/images/home.png") no-repeat center center fixed;
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -31,12 +31,12 @@
             <div class="message success"><?= htmlspecialchars($success) ?></div>
             <script>
                 setTimeout(() => {
-                    window.location.href = '/coffee/user/login';
+                    window.location.href = '/jewelry/user/login';
                 }, 2000);
             </script>
         <?php endif; ?>
 
-        <form action="/coffee/user/register" method="POST">
+        <form action="/jewelry/user/register" method="POST">
             <div class="input-container">
                 <i class="fas fa-user"></i>
                 <input type="text" name="fullname" placeholder="Họ tên" required />
@@ -56,7 +56,7 @@
             <button type="submit">ĐĂNG KÍ</button>
         </form>
 
-        <p>Đã có tài khoản? <a href="/coffee/user/login">Đăng nhập</a></p>
+        <p>Đã có tài khoản? <a href="/jewelry/user/login">Đăng nhập</a></p>
     </div>
 </body>
 </html>

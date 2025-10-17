@@ -10,7 +10,7 @@ class VoucherController {
         session_start();
         }
         if (!isset($_SESSION['is_admin']) || $_SESSION['is_admin'] !== true) {
-            header("Location: /coffee/login");
+            header("Location: /jewelry/login");
             exit();
         }
         $this->voucherModel = new Voucher($db);
@@ -37,7 +37,7 @@ class VoucherController {
             $so_luong, $da_su_dung, $trang_thai, $dieukien
         );
 
-        header("Location: /coffee/admin/voucher/index");
+        header("Location: /jewelry/admin/voucher/index");
         exit();
     }
     require_once ROOT_PATH . '/app/views/admin/voucher/create.php';
@@ -70,7 +70,7 @@ class VoucherController {
             $voucher['trang_thai'],    
             $dieukien
         );
-            header("Location: /coffee/admin/voucher/index");
+            header("Location: /jewelry/admin/voucher/index");
             exit();
         }
         require_once ROOT_PATH . '/app/views/admin/voucher/edit.php';
@@ -78,7 +78,7 @@ class VoucherController {
 
     public function delete($id) {
         $this->voucherModel->delete($id);
-        header("Location: /coffee/admin/voucher/index");
+        header("Location: /jewelry/admin/voucher/index");
         exit();
     }
 }

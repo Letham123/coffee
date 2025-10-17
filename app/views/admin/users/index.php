@@ -14,7 +14,7 @@
 </head>
 <body>
 <h2>Quản Lý Người Dùng</h2>
-<p><a href="/coffee/admin/admindashboard" class="button">Quay lại</a></p>
+<p><a href="/jewelry/admin/admindashboard" class="button">Quay lại</a></p>
 <table>
     <tr>
         <th>ID</th>
@@ -30,8 +30,8 @@
         <td><?= htmlspecialchars($user['email']) ?></td>
         <td><?= htmlspecialchars($user['loai_nguoi_dung']) ?></td>
         <td>
-            <a href="/coffee/admin/users/detail/<?= $user['id_user'] ?>" class="button">Sửa</a>
-            <a href="/coffee/admin/users/delete/<?= $user['id_user'] ?>" onclick="return confirm('Bạn có chắc muốn xóa khách hàng này?')" class="button delete">Xóa</a>
+            <a href="/jewelry/admin/users/detail/<?= $user['id_user'] ?>" class="button">Sửa</a>
+            <a href="/jewelry/admin/users/delete/<?= $user['id_user'] ?>" onclick="return confirm('Bạn có chắc muốn xóa khách hàng này?')" class="button delete">Xóa</a>
         </td>
     </tr>
     

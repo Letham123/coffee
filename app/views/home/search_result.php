@@ -7,13 +7,13 @@
     <title>Kết quả tìm kiếm</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/coffee/public/css/style.css" />
+    <link rel="stylesheet" href="/jewelry/public/css/style.css" />
 
     <style>
-        .coffee {
+        .jewelry {
             padding: 40px 20px;
         }
-        .coffee .heading {
+        .jewelry .heading {
             text-align: center;
             font-size: 28px;
             margin-bottom: 30px;
@@ -80,12 +80,12 @@
     <div class="box-container">
         <?php foreach ($products as $row): ?>
             <div class="box">
-                <img src="/coffee/public/images/<?= htmlspecialchars($row['image']) ?>" alt="<?= htmlspecialchars($row['name']) ?>">
+                <img src="/jewelry/public/images/<?= htmlspecialchars($row['image']) ?>" alt="<?= htmlspecialchars($row['name']) ?>">
                 <h3><?= htmlspecialchars($row['name']) ?></h3>
                 <div class="price">
                     <?= number_format($row['price']) ?> VND 
                 </div>
-                <form method="POST" action="/coffee/cart/add">
+                <form method="POST" action="/jewelry/cart/add">
                     <input type="hidden" name="id" value="<?= $row['id_product'] ?>">
                     <input type="hidden" name="name" value="<?= htmlspecialchars($row['name']) ?>">
                      <input type="hidden" name="price" value="<?= $product['price'] ?>">

@@ -30,7 +30,7 @@ class AccountController {
     public function changePassword() {
         $userId = $_SESSION['user_id'] ?? null;
         if(!$userId) {
-            header("Location: /coffee/home/index");
+            header("Location: /jewelry/home/index");
             exit;
         }
 
@@ -44,21 +44,21 @@ class AccountController {
 
             if(!$user) {
                 $_SESSION['changePasswordMessage'] = ['type'=>'error','text'=>'Người dùng không tồn tại.'];
-                header("Location: /coffee/account/index");
+                header("Location: /jewelry/account/index");
                 exit;
             }
 
             // Kiểm tra mật khẩu hiện tại
             if(!password_verify($currentPassword, $user['password'])) {
                 $_SESSION['changePasswordMessage'] = ['type'=>'error','text'=>'Mật khẩu hiện tại không đúng.'];
-                header("Location: /coffee/account/index");
+                header("Location: /jewelry/account/index");
                 exit;
             }
 
             // Kiểm tra mật khẩu mới và xác nhận
             if($newPassword !== $confirmPassword) {
                 $_SESSION['changePasswordMessage'] = ['type'=>'error','text'=>'Xác nhận mật khẩu mới không khớp.'];
-                header("Location: /coffee/account/index");
+                header("Location: /jewelry/account/index");
                 exit;
             }
 
@@ -72,12 +72,12 @@ class AccountController {
                 $_SESSION['changePasswordMessage'] = ['type'=>'error','text'=>'Đổi mật khẩu thất bại, thử lại sau.'];
             }
 
-            header("Location: /coffee/account/index");
+            header("Location: /jewelry/account/index");
             exit;
         }
 
         // Nếu không phải POST, chuyển về trang hồ sơ
-        header("Location: /coffee/account/index");
+        header("Location: /jewelry/account/index");
         exit;
     }
 }

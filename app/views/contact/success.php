@@ -7,7 +7,7 @@
     <h2 style="color:green; margin-bottom:15px;">Đã gửi tin nhắn thành công!</h2>
     <p style="font-size:16px; color:#555;">Cảm ơn bạn đã liên hệ với chúng tôi.</p>
 
-    <a href="/coffee/" style="display:inline-block; margin-top:20px; padding:10px 20px; background:#000; color:#fff; text-decoration:none; border-radius:5px;">
+    <a href="/jewelry/" style="display:inline-block; margin-top:20px; padding:10px 20px; background:#000; color:#fff; text-decoration:none; border-radius:5px;">
     Về trang chủ
 </a>
 </div>

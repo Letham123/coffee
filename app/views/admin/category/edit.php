@@ -12,11 +12,11 @@
 </head>
 <body>
 <h2>Sửa Danh Mục #<?= $category['id_category'] ?></h2>
-<p><a href="/coffee/admin/category/index">← Quay lại danh sách danh mục</a></p>
+<p><a href="/jewelry/admin/category/index">← Quay lại danh sách danh mục</a></p>
 
-<form method="post" action="/coffee/admin/category/edit/<?= $category['id_category'] ?>">
-    <label for="ten_danhmuc">Tên danh mục:</label>
-    <input type="text" id="ten_danhmuc" name="ten_danhmuc" value="<?= htmlspecialchars($category['ten_danhmuc']) ?>" required>
+<form method="post" action="/jewelry/admin/category/edit/<?= $category['id_category'] ?>">
+    <label for="name_category">Tên danh mục:</label>
+    <input type="text" id="name_category" name="name_category" value="<?= htmlspecialchars($category['name_category']) ?>" required>
 
     <button type="submit">Cập nhật danh mục</button>
 </form>

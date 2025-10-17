@@ -87,7 +87,7 @@
 </head>
 <body>
 
-<form action="/coffee/order/submit" method="post">
+<form action="/jewelry/order/submit" method="post">
     <h3><i class="fas fa-truck"></i> Thông tin giao hàng</h3>
 
     <label for="diachi"><i class="fas fa-location-dot" style="color:red;"></i> Địa chỉ giao hàng:</label>

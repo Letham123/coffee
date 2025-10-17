@@ -65,15 +65,15 @@
             <tr>
                 <td><?= htmlspecialchars($order['id_order']) ?></td>
                 <td><?= htmlspecialchars($order['username']) ?></td>
-                <td><?= number_format($order['tongtien']) ?> VND</td>
+                <td><?= number_format($order['total']) ?> VND</td>
                 <td>
-                    <?php if($order['trangthai'] == 'Chờ xử lý'): ?>
+                    <?php if($order['status'] == 'Chờ xử lý'): ?>
                         <span class="badge bg-warning text-dark">Chờ xử lý</span>
                     <?php else: ?>
                         <span class="badge bg-success">Đã giao</span>
                     <?php endif; ?>
                 </td>
-                <td><?= $order['ngaydat'] ?></td>
+                <td><?= $order['order_date'] ?></td>
             </tr>
             <?php endforeach; ?>
         </tbody>

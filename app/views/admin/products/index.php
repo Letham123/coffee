@@ -15,8 +15,8 @@
 </head>
 <body>
 <h2>Quản Lý Sản Phẩm</h2>
-<p><a href="/coffee/admin/products/create" class="button">Thêm sản phẩm mới</a></p>
-<a href="/coffee/admin/admindashboard" class="button">Quay lại</a>
+<p><a href="/jewelry/admin/products/create" class="button">Thêm sản phẩm mới</a></p>
+<a href="/jewelry/admin/admindashboard" class="button">Quay lại</a>
 <table>
     <tr>
         <th>ID</th>
@@ -34,8 +34,8 @@
         <td><?= number_format($product['price']) ?> VND</td>
         <td><?= htmlspecialchars($product['ten_danhmuc']) ?></td>
         <td>
-            <a href="/coffee/admin/products/edit/<?= $product['id_product'] ?>" class="button">Sửa</a>
-            <a href="/coffee/admin/products/delete/<?= $product['id_product'] ?>" onclick="return confirm('Bạn có chắc muốn xóa sản phẩm này?')" class="button delete">Xóa</a>
+            <a href="/jewelry/admin/products/edit/<?= $product['id_product'] ?>" class="button">Sửa</a>
+            <a href="/jewelry/admin/products/delete/<?= $product['id_product'] ?>" onclick="return confirm('Bạn có chắc muốn xóa sản phẩm này?')" class="button delete">Xóa</a>
         </td>
         
     </tr>

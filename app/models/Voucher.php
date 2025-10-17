@@ -10,7 +10,7 @@ class Voucher {
         $voucherModel = new Voucher($this->conn);
     }
     public function getAll() {
-        $sql = "SELECT * FROM magiamgia ORDER BY id DESC";
+        $sql = "SELECT * FROM discouny ORDER BY iddiscount DESC";
         $result = mysqli_query($this->conn, $sql);
         $list = [];
         while ($row = mysqli_fetch_assoc($result)) {
@@ -19,35 +19,35 @@ class Voucher {
         return $list;
     }
 
-    public function getById($id) {
-        $id = intval($id);
-        $sql = "SELECT * FROM magiamgia WHERE id = $id LIMIT 1";
+    public function getById($iddiscount) {
+        $iddiscount = intval($iddiscount);
+        $sql = "SELECT * FROM discount WHERE iddiscount = $iddiscount LIMIT 1";
         $result = mysqli_query($this->conn, $sql);
         return mysqli_fetch_assoc($result);
     }
 
-    public function create($ma, $phan_tram_giam, $giam_toi_da, $ngay_bat_dau, $ngay_ket_thuc, $so_luong, $da_su_dung, $trang_thai, $dieukien) {
+    public function create($iddiscount, $discountpercentage, $Max_discount, $Create_at, $End_date, $Quantity, $Used_times, $Status, $Condition) {
         $stmt = $this->conn->prepare("
-            INSERT INTO magiamgia (ma, phan_tram_giam, giam_toi_da, ngay_bat_dau, ngay_ket_thuc, so_luong, da_su_dung, trang_thai, dieukien)
+            INSERT INTO discount (iddiscount, discountpercentage, Max_discount, Create_at, End_date, Quantity, Used_times, Status, Condition)
             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
         ");
-        $stmt->bind_param("sddssiiis", $ma, $phan_tram_giam, $giam_toi_da, $ngay_bat_dau, $ngay_ket_thuc, $so_luong, $da_su_dung, $trang_thai, $dieukien);
+        $stmt->bind_param("sddssiiis", $iddiscount, $discountpercentage, $Max_discount, $Create_at, $End_date, $Quantity, $Used_times, $Status, $Condition);
         return $stmt->execute();
     }
 
-    public function update($id, $ma, $phan_tram_giam, $giam_toi_da, $ngay_bat_dau, $ngay_ket_thuc, $so_luong, $da_su_dung, $trang_thai, $dieukien) {
+    public function update($iddiscount, $id, $discountpercentage, $Max_discount, $Create_at, $End_date, $Quantity, $Used_times, $Status, $Condition) {
     $stmt = $this->conn->prepare("
-        UPDATE magiamgia SET 
-            ma = ?, 
-            phan_tram_giam = ?, 
-            giam_toi_da = ?, 
-            ngay_bat_dau = ?, 
-            ngay_ket_thuc = ?, 
-            so_luong = ?, 
-            da_su_dung = ?, 
-            trang_thai = ?, 
-            dieukien = ?
-        WHERE id = ?
+        UPDATE discount SET 
+            iddiscount = ?, 
+            discountpercentage = ?, 
+            Max_discount = ?, 
+            Create_at = ?, 
+            End_date = ?, 
+            Quantity = ?, 
+            Used_times = ?, 
+            Status = ?, 
+            Condition = ?
+        WHERE iddiscount = ?
     ");
 
     if (!$stmt) {
@@ -57,24 +57,24 @@ class Voucher {
     $stmt->bind_param(
         "sddssiiisi", 
         $ma, 
-        $phan_tram_giam, 
-        $giam_toi_da, 
-        $ngay_bat_dau, 
-        $ngay_ket_thuc, 
-        $so_luong, 
-        $da_su_dung, 
-        $trang_thai, 
+        $discountpercentage, 
+        $Max_discount, 
+        $Create_at, 
+        $End_date, 
+        $Quantity, 
+        $Used_times, 
+        $Status, 
         $dieukien, 
-        $id
+        $iddiscount
     );
 
     return $stmt->execute();
 }
 
 
-    public function delete($id) {
-        $id = intval($id);
-        $sql = "DELETE FROM magiamgia WHERE id = $id";
+    public function delete($iddiscount) {
+        $iddiscount = intval($iddiscount);
+        $sql = "DELETE FROM discount WHERE iddiscount = $iddiscount";
         return mysqli_query($this->conn, $sql);
     }
 }

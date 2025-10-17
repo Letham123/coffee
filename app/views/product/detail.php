@@ -15,7 +15,7 @@
         <input type="hidden" name="name" value="<?= htmlspecialchars($product['name']) ?>">
         <input type="hidden" name="price" value="<?= $product['price'] ?>">
         <input type="hidden" name="image" value="<?= htmlspecialchars($product['image']) ?>">
-        <input type="text" name="ghichu" placeholder="Ghi chú (nếu có)">
+        <input type="text" name="note" placeholder="Ghi chú (nếu có)">
         <button type="submit">Thêm vào giỏ</button>
     </form>
 

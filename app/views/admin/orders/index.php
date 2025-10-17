@@ -14,7 +14,7 @@
 </head>
 <body>
 <h2>Quản Lý Đơn hàng</h2>
-<p><a href="/coffee/admin/admindashboard" class="button">Quay lại</a></p>
+<p><a href="/jewelry/admin/admindashboard" class="button">Quay lại</a></p>
 <table border="1" cellpadding="8" cellspacing="0" width="100%">
     <thead>
         <tr>
@@ -35,15 +35,15 @@
         <tr>
             <td><?= $order['id_order'] ?></td>
             <td><?= htmlspecialchars($order['id_user'])?></td>
-            <td><?= number_format($order['tongtien']) ?> đ</td>
-            <td><?= number_format($order['phivanchuyen']) ?> đ</td>
-            <td><?= htmlspecialchars($order['diachi']) ?></td>
+            <td><?= number_format($order['total']) ?> đ</td>
+            <td><?= number_format($order['fee_ship']) ?> đ</td>
+            <td><?= htmlspecialchars($order['adress']) ?></td>
             <td><?= htmlspecialchars($order['thanhtoan']) ?></td>
-            <td><?= htmlspecialchars($order['ngaydat']) ?></td>
-            <td><?= htmlspecialchars($order['trangthai']) ?></td>
+            <td><?= htmlspecialchars($order['order_date']) ?></td>
+            <td><?= htmlspecialchars($order['status']) ?></td>
             <td>
-                  <a href="/coffee/admin/orders/view/<?= $order['id_order'] ?>" class="button">Xem</a> |
-                <a href="/coffee/admin/orders/delete/<?= $order['id_order'] ?>" onclick="return confirm('Bạn có chắc muốn xóa đơn hàng này?')" class="button delete">Xóa</a>
+                  <a href="/jewelry/admin/orders/view/<?= $order['id_order'] ?>" class="button">Xem</a> |
+                <a href="/jewelry/admin/orders/delete/<?= $order['id_order'] ?>" onclick="return confirm('Bạn có chắc muốn xóa đơn hàng này?')" class="button delete">Xóa</a>
         </td>    
         </tr>
         <?php endforeach; ?>

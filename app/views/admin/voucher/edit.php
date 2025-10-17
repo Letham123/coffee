@@ -21,7 +21,7 @@
 <body>
 <h2>Sửa mã giảm giá #<?= htmlspecialchars($voucher['id']) ?></h2>
 
-<form method="post" action="/coffee/admin/voucher/edit/<?= $voucher['id'] ?>">
+<form method="post" action="/jewelry/admin/voucher/edit/<?= $voucher['id'] ?>">
     <p>
         <label for="ma">Mã giảm giá:</label><br>
         <input type="text" id="ma" name="ma" value="<?= htmlspecialchars($voucher['ma']) ?>" required>
@@ -45,7 +45,7 @@
     </p>
     <p>
         <button type="submit">Cập nhật</button>
-        <a href="/coffee/admin/voucher/index" style="margin-left: 15px;">Hủy</a>
+        <a href="/jewelry/admin/voucher/index" style="margin-left: 15px;">Hủy</a>
     </p>
 </form>
 

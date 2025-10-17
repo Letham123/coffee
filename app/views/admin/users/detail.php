@@ -7,7 +7,7 @@
 <body>
 <h2>Chỉnh sửa người dùng #<?= $user['id_user'] ?></h2>
 
-<form method="post" action="/coffee/admin/users/update">
+<form method="post" action="/jewelry/admin/users/update">
     <input type="hidden" name="id_user" value="<?= $user['id_user'] ?>">
     <p>
         <label for="username">Tên đăng nhập:</label><br>
@@ -27,6 +27,6 @@
     <button type="submit">Cập nhật</button>
 </form>
 
-<p><a href="/coffee/admin/users/index">Quay lại danh sách người dùng</a></p>
+<p><a href="/jewelry/admin/users/index">Quay lại danh sách người dùng</a></p>
 </body>
 </html>

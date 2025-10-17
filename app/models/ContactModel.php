@@ -12,18 +12,18 @@ class ContactModel {
 
     // Lưu dữ liệu liên hệ vào bảng lienhe
     public function save($data) {
-        $sql = "INSERT INTO lienhe (name, email, sdt, noidung, ngaygui) 
-                VALUES (:name, :email, :sdt, :noidung, NOW())";
+        $sql = "INSERT INTO contact (name, email, phone, descr, create_at) 
+                VALUES (:name, :email, :phone, :descr, NOW())";
         $stmt = $this->db->prepare($sql);
         return $stmt->execute([
             ':name' => $data['name'],
             ':email' => $data['email'],
-            ':sdt' => $data['phone'],
-            ':noidung' => $data['message']
+            ':phone' => $data['phone'],
+            ':descr' => $data['message']
         ]);
     }
     public function getAll() {
-    $sql = "SELECT * FROM lienhe ORDER BY ngaygui DESC";
+    $sql = "SELECT * FROM contact ORDER BY create_at DESC";
     $result = $this->db->query($sql);
 
     $data = [];

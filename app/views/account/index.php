@@ -35,7 +35,7 @@
         <?php if(isset($changePasswordMessage)): ?>
             <p class="<?= $changePasswordMessage['type'] ?>"><?= htmlspecialchars($changePasswordMessage['text']) ?></p>
         <?php endif; ?>
-        <form action="/coffee/account/changePassword" method="post">
+        <form action="/jewelry/account/changePassword" method="post">
             <label for="current_password">Mật khẩu hiện tại</label>
             <input type="password" name="current_password" id="current_password" required>
 
@@ -54,7 +54,7 @@
         <p><b>Tên:</b> <?= htmlspecialchars($userInfo['username']) ?></p>
         <p><b>Email:</b> <?= htmlspecialchars($userInfo['email']) ?></p>
         <p><b>Mã khách hàng:</b> <?= htmlspecialchars($userInfo['id_user']) ?></p>
-        <a href="/coffee/home/index" class="btn">Đăng xuất</a>
+        <a href="/jewelry/home/index" class="btn">Đăng xuất</a>
     </div>
     <div class="box-cart">
         <h3><i class="fas fa-cart-shopping" style="color: black;"></i> Đơn hàng đã mua</h3>
@@ -71,10 +71,10 @@
                 <?php foreach ($orders as $order): ?>
                 <tr>
                     <td><?= htmlspecialchars($order['id_order']) ?></td>
-                    <td><?= htmlspecialchars($order['ngaydat']) ?></td>
-                    <td><?= htmlspecialchars($order['diachi']) ?></td>
-                    <td><?= number_format($order['tongtien']) ?> VND</td>
-                    <td><?= htmlspecialchars($order['trangthai']) ?></td>
+                    <td><?= htmlspecialchars($order['order_date']) ?></td>
+                    <td><?= htmlspecialchars($order['adress']) ?></td>
+                    <td><?= number_format($order['total']) ?> VND</td>
+                    <td><?= htmlspecialchars($order['status']) ?></td>
                 </tr>
                 <?php endforeach; ?>
             </table>

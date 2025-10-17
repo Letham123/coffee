@@ -9,7 +9,7 @@ class Customer {
     }
 
     public function getAll() {
-        $sql = "SELECT * FROM nguoidung ORDER BY id DESC";
+        $sql = "SELECT * FROM user ORDER BY id DESC";
         $result = $this->conn->query($sql);
         $customers = [];
         while ($row = $result->fetch_assoc()) {
@@ -19,7 +19,7 @@ class Customer {
     }
 
     public function getById($id) {
-        $sql = "SELECT * FROM nguoidung WHERE id = ?";
+        $sql = "SELECT * FROM user WHERE id = ?";
         $stmt = $this->conn->prepare($sql);
         $stmt->bind_param("i", $id);
         $stmt->execute();
@@ -27,14 +27,14 @@ class Customer {
     }
 
     public function update($id, $fullname, $phone, $email) {
-        $sql = "UPDATE nguoidung SET fullname = ?, phone = ?, email = ? WHERE id = ?";
+        $sql = "UPDATE user SET fullname = ?, phone = ?, email = ? WHERE id = ?";
         $stmt = $this->conn->prepare($sql);
         $stmt->bind_param("sssi", $fullname, $phone, $email, $id);
         return $stmt->execute();
     }
 
     public function delete($id) {
-        $sql = "DELETE FROM nguoidung WHERE id = ?";
+        $sql = "DELETE FROM user WHERE id = ?";
         $stmt = $this->conn->prepare($sql);
         $stmt->bind_param("i", $id);
         return $stmt->execute();

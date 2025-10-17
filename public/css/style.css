@@ -295,79 +295,79 @@ body {
     text-transform: none;
     text-align: center;
 }
-.coffee .box-container,
-.cake .box-container,
-.tea .box-container {
+.nhan .box-container,
+.vòngtay .box-container,
+.daychuyen .box-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap: 1.5rem;
 }
 
-.coffee .box-container .box,
-.cake .box-container .box,
-.tea .box-container .box {
+.nhan .box-container .box,
+.vongtay .box-container .box,
+.daychuyen .box-container .box {
     padding: 5rem;
     text-align: center;
     border: var(--border);
     transition: all 0.3s ease; /* Hiệu ứng mượt */
 }
 
-.coffee .box-container .box img,
-.cake .box-container .box img,
-.tea .box-container .box img {
+.nhan .box-container .box img,
+.vongtay .box-container .box img,
+.daychuyen .box-container .box img {
     height: 20rem;
     transition: all 0.3s ease;
 }
 
-.coffee .box-container .box h3,
-.cake .box-container .box h3,
-.tea .box-container .box h3 {
+.nhan .box-container .box h3,
+.vongtay .box-container .box h3,
+.daychuyen .box-container .box h3 {
     color: black;
     font-size: 2rem;
     padding: 1rem 0;
 }
 
-.coffee .box-container .box .price,
-.cake .box-container .box .price,
-.tea .box-container .box .price {
+.nhan .box-container .box .price,
+.vongtay .box-container .box .price,
+.daychuyen .box-container .box .price {
     color: black;
     font-size: 2.5rem;
     padding: .5rem 0;
 }
 
-.coffee .box-container .box .price span,
-.cake .box-container .box .price span,
-.tea .box-container .box .price span {
+.nhan .box-container .box .price span,
+.vongtay .box-container .box .price span,
+.daychuyen .box-container .box .price span {
     color: black;
     font-size: 1.5rem;
     text-decoration: line-through;
 }
 
-.coffee .box-container .box:hover,
-.coffee .box-container .box:active,
-.coffee .box-container .box:focus,
-.cake .box-container .box:hover,
-.cake .box-container .box:active,
-.cake .box-container .box:focus,
-.tea .box-container .box:hover,
-.tea .box-container .box:active,
-.tea .box-container .box:focus {
+.nhan .box-container .box:hover,
+.nhan .box-container .box:active,
+.nhan .box-container .box:focus,
+.vongtay .box-container .box:hover,
+.vongtay .box-container .box:active,
+.vongtay .box-container .box:focus,
+.daychuyen .box-container .box:hover,
+.daychuyen .box-container .box:active,
+.daychuyen .box-container .box:focus {
     background: white;
     transform: scale(1.05); 
     outline: none;
 }
 
-.coffee .box-container .box:hover > *,
-.coffee .box-container .box:active > *,
-.coffee .box-container .box:focus > *,
-.cake .box-container .box:hover > *,
-.cake .box-container .box:active > *,
-.cake .box-container .box:focus > *,
-.coffee .box-container .box:active > *,
-.coffee .box-container .box:focus > *,
-.tea .box-container .box:hover > *,
-.tea .box-container .box:active > *,
-.tea .box-container .box:focus > * {
+.nhan .box-container .box:hover > *,
+.nhan .box-container .box:active > *,
+.nhan .box-container .box:focus > *,
+.vongtay .box-container .box:hover > *,
+.vongtay .box-container .box:active > *,
+.vongtay .box-container .box:focus > *,
+.nhan .box-container .box:active > *,
+.nhan .box-container .box:focus > *,
+.daychuyen .box-container .box:hover > *,
+.daychuyen .box-container .box:active > *,
+.daychuyen.box-container .box:focus > * {
     color: black;
 }
 

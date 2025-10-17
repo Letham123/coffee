@@ -37,4 +37,4 @@
     <p>Chưa có sản phẩm bán chạy nào.</p>
 <?php endif; ?>
 
-<a href="/coffee/admin/paymentreport/index">Quay lại</a>
+<a href="/jewelry/admin/paymentreport/index">Quay lại</a>

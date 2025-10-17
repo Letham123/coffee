@@ -11,8 +11,8 @@ class OrderDetail {
     // Lấy chi tiết đơn hàng
     public function getByOrderId($orderId) {
         $sql = "SELECT od.*, p.name, p.price, p.image 
-                FROM chitietdonhang od 
-                JOIN sanpham p ON od.id_sp = p.id 
+                FROM order_detail od 
+                JOIN product p ON od.id_product = p.id 
                 WHERE od.id_order = ?";
         $stmt = $this->conn->prepare($sql);
         $stmt->bind_param("i", $orderId);
@@ -31,9 +31,9 @@ class OrderDetail {
     $limit = intval($limit);
     if ($limit < 1) $limit = 10;
 
-    $sql = "SELECT sp.id_product, sp.name, SUM(ct.soluong) as total_sold
-            FROM chitietdonhang ct
-            JOIN sanpham sp ON ct.id_product = sp.id_product
+    $sql = "SELECT sp.id_product, sp.name, SUM(ct.quantity) as total_sold
+            FROM order_detail ct
+            JOIN product sp ON ct.id_product = sp.id_product
             GROUP BY sp.id_product, sp.name
             ORDER BY total_sold DESC
             LIMIT $limit";

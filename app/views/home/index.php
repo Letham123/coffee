@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Broken Strength Coffee</title>
+    <title>LARA JEWELRY</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-	<link rel="stylesheet" href="/coffee/public/css/style.css">
+	<link rel="stylesheet" href="/jewelry/public/css/style.css">
     <style>
     .carousel-inner img {
     width: 100%;
@@ -76,31 +76,31 @@
     </script>
 <?php endif; ?>
     <div class ="banner">
-        <img src = "/coffee/public/images/home.png" alt="Banner">
+        <img src = "/jewelry/public/images/home.png" alt="Banner">
     </div>
    
     <section class="about" id="about"> 
     <h1 class="heading"> about<span> us</span> </h1>
    </section>
    <div class="about-section">
-    <img src="/coffee/public/images/2.png" alt="About coffee">
+    <img src="/jewelry/public/images/2.png" alt="About jewelry">
     <div class = "about-text">
-    <h3>☕ Broken Strength Coffee – Hương vị đậm đà, không gian thư giãn.</h3>
-    <p>Broken Strength Coffee không chỉ là quán cà phê, mà là nơi bạn tìm thấy sự thư giãn và kết nối. Chúng tôi mang đến những ly cà phê chất lượng, được tuyển chọn từ hạt nguyên chất và rang xay tỉ mỉ. Với không gian ấm cúng, hiện đại, chúng tôi hy vọng mỗi lần ghé thăm, bạn đều có thể tận hưởng khoảnh khắc bình yên và trọn vẹn nhất.</p>
+    <h3>Lara Jewelry – Tinh tế trong từng khoảnh khắc.</h3>
+    <p>Lara Jewelry không chỉ là thương hiệu trang sức, mà là nơi tôn vinh vẻ đẹp và phong cách riêng của bạn.Chúng tôi mang đến những thiết kế tinh tế, được chế tác từ chất liệu cao cấp và tỉ mỉ trong từng chi tiết.Với phong cách hiện đại nhưng vẫn giữ nét thanh lịch, Lara Jewelry hy vọng mỗi món trang sức bạn chọn đều mang đến cảm giác tự tin, rạng ngời và ý nghĩa đặc biệt trong từng khoảnh khắc.</p>
     </div>
     </div>
-    <section class="coffee" id="coffee">
-        <h1 class="heading"> our <span>coffee</span> </h1>
+    <section class="nhan" id="nhan">
+        <h1 class="heading"> our <span>ring</span> </h1>
         <div class="box-container">
-        <?php foreach ($coffee as $row): ?>
+        <?php foreach ($nhan as $row): ?>
             <div class="box">
-                <img src="/coffee/public/images/<?php echo htmlspecialchars($row['image']); ?>" alt="<?php echo htmlspecialchars($row['name']); ?>">
-                <h3><?php echo htmlspecialchars($row['name']); ?></h3>
+                <img src="/jewelry/public/images/<?php echo htmlspecialchars($row['image']); ?>" alt="<?php echo htmlspecialchars($row['name_product']); ?>">
+                <h3><?php echo htmlspecialchars($row['name_product']); ?></h3>
                 <div class="price"><?php echo number_format($row['price']); ?>VND
                 </div>
-                <form method="POST" action="/coffee/cart/add">
+                <form method="POST" action="/jewelry/cart/add">
                     <input type="hidden" name="id" value="<?php echo $row['id_product']; ?>">
-                    <input type="hidden" name="name" value="<?php echo htmlspecialchars($row['name']); ?>">
+                    <input type="hidden" name="name_product" value="<?php echo htmlspecialchars($row['name_product']); ?>">
                     <input type="hidden" name="price" value="<?= $row['price'] ?>">
                     <input type="hidden" name="image" value="<?php echo htmlspecialchars($row['image']); ?>">
                     <button type="submit" class="btn">Thêm vào giỏ hàng</button>
@@ -110,18 +110,18 @@
         </div>
     </section>
 
-    <section class="tea" id="tea">
-        <h1 class="heading"> our <span>tea</span> </h1>
+    <section class="daychuyen" id="daychuyen">
+        <h1 class="heading"> our <span>necklace</span> </h1>
         <div class="box-container">
-        <?php foreach ($tea as $row): ?>
+        <?php foreach ($daychuyen as $row): ?>
             <div class="box">
-            <img src="/coffee/public/images/<?php echo htmlspecialchars($row['image']); ?>" alt="<?php echo htmlspecialchars($row['name']); ?>">
-                <h3><?php echo htmlspecialchars($row['name']); ?></h3>
+            <img src="/jewelry/public/images/<?php echo htmlspecialchars($row['image']); ?>" alt="<?php echo htmlspecialchars($row['name_product']); ?>">
+                <h3><?php echo htmlspecialchars($row['name_product']); ?></h3>
                 <div class="price"><?php echo number_format($row['price']); ?>VND</span>
                 </div>
-                <form method="POST" action="/coffee/cart/add">
+                <form method="POST" action="/jewelry/cart/add">
                     <input type="hidden" name="id" value="<?php echo $row['id_product']; ?>">
-                    <input type="hidden" name="name" value="<?php echo htmlspecialchars($row['name']); ?>">
+                    <input type="hidden" name="name_product" value="<?php echo htmlspecialchars($row['name_product']); ?>">
                     <input type="hidden" name="price" value="<?= $row['price'] ?>">
                     <input type="hidden" name="image" value="<?php echo htmlspecialchars($row['image']); ?>">
                     <button type="submit" class="btn">Thêm vào giỏ hàng</button>
@@ -131,18 +131,18 @@
         </div>
     </section>
 
-    <section class="cake" id="cake">
-        <h1 class="heading"> our <span>cake</span> </h1>
+    <section class="vongtay" id="vongtay">
+        <h1 class="heading"> our <span>bracelet</span> </h1>
         <div class="box-container">
-        <?php foreach ($cake as $row): ?>
+        <?php foreach ($vongtay as $row): ?>
              <div class="box">
-            <img src="/coffee/public/images/<?php echo htmlspecialchars($row['image']); ?>" alt="<?php echo htmlspecialchars($row['name']); ?>">
-                <h3><?php echo htmlspecialchars($row['name']); ?></h3>
+            <img src="/jewelry/public/images/<?php echo htmlspecialchars($row['image']); ?>" alt="<?php echo htmlspecialchars($row['name_product']); ?>">
+                <h3><?php echo htmlspecialchars($row['name_product']); ?></h3>
                 <div class="price"><?php echo number_format($row['price']); ?>VND
                 </div>
-                <form method="POST" action="/coffee/cart/add">
+                <form method="POST" action="/jewelry/cart/add">
                     <input type="hidden" name="id" value="<?php echo $row['id_product']; ?>">
-                    <input type="hidden" name="name" value="<?php echo htmlspecialchars($row['name']); ?>">
+                    <input type="hidden" name="name_product" value="<?php echo htmlspecialchars($row['name_product']); ?>">
                      <input type="hidden" name="price" value="<?= $row['price'] ?>">
                     <input type="hidden" name="image" value="<?php echo htmlspecialchars($row['image']); ?>">
                     <button type="submit" class="btn">Thêm vào giỏ hàng</button>
@@ -152,7 +152,7 @@
         </div>
     </section>
     
-<section class="feedback" id="feedback">
+<!-- <section class="feedback" id="feedback">
                 <h1 class="heading"> <span>Why they </span> love us</h1>
                 <div class="feedback-container">
                     <div class="feedback-box">
@@ -210,7 +210,7 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
         <section class="contact" id="contact">
 		<h1 class="heading"> <span>contact</span> us </h1>
 		<div class="row">

@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
             e.preventDefault();
             const id = this.dataset.id;
             if (confirm('Bạn có chắc muốn xóa sản phẩm này không?')) {
-                fetch('/coffee/cart/remove', {
+                fetch('/jewelry/cart/remove', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/x-www-form-urlencoded'
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
         clearCartBtn.addEventListener('click', function(e) {
             e.preventDefault();
             if (confirm('Bạn có chắc muốn xóa toàn bộ giỏ hàng không?')) {
-                fetch('/coffee/cart/remove', {
+                fetch('/jewelry/cart/remove', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/x-www-form-urlencoded'

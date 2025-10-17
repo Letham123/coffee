@@ -38,6 +38,6 @@
     <button type="submit">Thêm sản phẩm</button>
 </form>
 
-<p><a href="/coffee/admin/products/index">Quay lại danh sách sản phẩm</a></p>
+<p><a href="/jewelry/admin/products/index">Quay lại danh sách sản phẩm</a></p>
 </body>
 </html>
